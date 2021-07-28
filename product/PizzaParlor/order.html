@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Order - Cheech's Pizza Parlor</title>
+    <meta name="description" content="Cheech, Pizza, Toppings, Food, Delivery">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/62dc96fb56.js" crossorigin="anonymous"></script>
+    <!-- Author: Jeff Johnson
+         Date: 07/11/2021
+         Project: Cheech's Flexible Pizza Parlor
+         File Name: order.html
+         Purpose: To work with and understand flex boxes -->
+  </head>
+  <body>
+    <header>
+    <div class="banner">
+      <img src="logo.png" alt="Cheech's Pizza Logo">
+    </div>
+    <div class="nav">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="order.html">Order Online</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Our Location</a></li>
+      </ul>
+    </nav>
+    </div>
+    </header>
+    <div class="row">
+  <!-- Order Form -->
+      <div class="column">
+        <form class="orderform" action="index.html" method="post" autocomplete="on">
+          <h1>Place an order:</h1>
+
+          <div class="form-group cust-info">
+            <label for="fname">First Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="fname" name="fname" class="fname" placeholder="First Name">
+            </label></div>
+
+          <div class="form-group cust-info">
+            <label for="lname">Last Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="lname" name="lname" class="lname" placeholder="Last Name">
+            </label></div>
+
+          <div class="form-group cust-info">
+            <label for="phone">Phone Number:
+            <input type="tel" id="phone" name="phone" class="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555">
+            </label></div>
+
+          <div class="form-group">
+            <label for="pizzachoice"> Choose Pizza:
+            <input list="pizzalist" id="pizzachoice">
+            <datalist id="pizzalist">
+              <option value="Tin Coppa"></option>
+              <option value="Up In Smoked Gouda"></option>
+              <option value="Nosh Bridges"></option>
+              <option value="A Margherita to Juan"></option>
+              <option value="Born in East St. Louis"></option>
+              <option value="The Great Pizza Hype"></option>
+            </datalist></label></div><br>
+            <br>
+          <div class="form-group">
+            <label for="quantity">Quantity:
+              <input type="number" id="quantity" name="quantity" min="0" max="99" value="1">
+            </label></div>
+
+          <div class="form-group">
+            <input type="submit" class="submit" name="submit" value="Place Order"></div>
+        </form>
+      </div><br>
+<!-- Testimonials -->
+      <div class="column">
+        <div class="testimonials">
+          <figure class="quote">
+          <blockquote>
+            <p>The Great Pizza Hype is hands down the best pizza I've ever had!</p>
+              <p>I tried to speak with the
+              manager to tell him how great it is, but I can never find him.
+              He must be a very busy man.</p>
+          </blockquote>
+          <figcaption>&mdash; Karen W., Ozark, MO</figcaption></figure>
+          <figure class="quote">
+          <blockquote>
+            <p>Cheech's has the best sauce, I feel like I'm back in Italy!
+            Maybe it's the oregano?</p>
+          </blockquote>
+          <figcaption>&mdash; T. Chong., Los Angeles, CA</figcaption></figure>
+            <figure class="quote">
+            <blockquote>
+              <p>The crust at Cheech's has that wonderful taste you can only
+                get from a brick pizza oven!</p>
+            </blockquote>
+            <figcaption>&mdash; Jeannie M., Ozark, MO</figcaption></figure>
+        </div>
+<!-- Social Media -->
+        <div class="socialmedia">
+          <h2>Follow us on Social Media!</h2><br>
+          <i class="fab fa-facebook-square"></i> <i class="fab fa-linkedin"></i>
+        </div><br>
+      </div>
+    </div>
+    <footer>
+      <div class="footerLegal">
+    &copy;2021 &nbsp;&nbsp; Cheech's Pizza, LLC &nbsp; All Rights Reserved.
+  </div>
+    </footer>
+  </body>
+</html>
