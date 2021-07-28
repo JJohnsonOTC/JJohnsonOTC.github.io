@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!--
+  Course: SU-CIS-130-101
+  Author: Jeff Johnson
+  Date: 06/19/2021
+  Project: About A Company
+  Subject: Assignment to create a company website.
+  File Name: index.html
+  -->
+  <meta charset="utf-8">
+  <meta name="author" content="Jeff Johnson">
+  <meta name="description" content="Placeholder.">
+    <title>Home - Bridger Outdoors</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/62dc96fb56.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header>
+    <!-- Banner image at the top -->
+    <div class="banner-image"></div>
+    <!-- navigation bar -->
+    <nav id="navbar">
+      <ul>
+        <li><img id="logo" src="bridgerlogo.png" alt="Bridger Logo"></li>
+        <li class="navlink"><a href="index.html">HOME</a></li>
+        <li class="navlink"><a href="product.html">SHOP</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Body of page -->
+  <main>
+    <br><br>
+    <h1 id="mainh1">Welcome to Bridger Outdoors</h1>
+    <div>
+    <p>
+    We are proud to offer the finest equipment and a knowledgeable staff to prepare
+    you for your next outdoor adventure.  From sea level to the highest eleveations,
+    we have just what you need to enjoy a safe, comfortable experience in the natural
+    wonders surrounding us.
+  </p></div><br>
+  <div id="quoteregion">
+  <figure class ="quote"><!-- Insert Leopold Quote -->
+    <blockquote>
+      To those devoid of imagination a blank place on the map is a useless
+      waste; to others, the most valuable part.</blockquote>
+    <figcaption>&mdash; Aldo Leopold, <cite>A Sand County Almanac</cite></figcaption>
+    </figure>
+      <br>
+      <p> We're different from your usual outdoor equipment retailer, we hire
+        staff with experience in fields such as mountaineering, conservation,
+        ski instrucion, hunting & fishing guides, as well as current and former
+        military personnel. Be sure to ask us about our outdoor skills courses!</p><br><br>
+
+      <p>We're more than happy to help with technical questions, sizing, and
+        selection based on your needs and the environments you will be experiencing.
+        Whether you're hunting moose in the remote Alaskan wilderness, climbing
+        the Alps, or adventuring somewhere a little closer to home - you've come
+        to the right place.
+      </p >
+    </div><br><br>
+    <!-- Direct them to store page, ram head logo at bottom -->
+    <div id="closing">
+      <br><br><br>
+      <h2>Ready to make some memories?</h2><br>
+      <p>Head on over to the <a href="product.html">Shop</a> and let's
+        get you prepared.
+      </p><br>
+      <img src="ramhead.png" alt="Ram Head Logo">
+    </div><br><br>
+    <!-- automatic image slideshow -->
+    <div class="slide-container">
+        <div class="image-container">
+          <img src="campfire.png" alt="campfire photo" class="slider-image">
+          <img src="tent.png" alt="scenic photo from tent" class="slider-image">
+          <img src="trekking.png" alt="hiking in woods photo" class="slider-image">
+          <img src="backpack.png" alt="tough trekking photo" class="slider-image">
+        </div>
+    </div>
+
+
+  </main>
+  <!-- Footer - Corporate standard-->
+  <footer>
+    <!--Contact Info -->
+    <div class="contactFooter">
+      <ul>
+        <li>Email: <a class="ftrinfo" href="mailto:contact.us@bridgeroutdoors.com">contact.us@bridgeroutdoors.com</a></li>
+        <li>Phone: <a class="ftrinfo" href="tel:+14065550123">(406) 555-0123</a></li>
+      </ul>
+    </div>
+    <!-- Social Media icons (won't be clickable, company doesn't exist)-->
+    <div class="socialMedia">
+      <i class="fab fa-facebook-square"></i> <i class="fab fa-linkedin"></i>
+    </div>
+    <div class="footerLegal">
+    &copy;2021 &nbsp;&nbsp; Bridger Outdoors &nbsp; All Rights Reserved.
+  </div>
+  </footer>
+  <!--Script for making the navbar "sticky" once it is going to roll off page -->
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+  <!-- JavaScript for image carousel -->
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("slider-image");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 5000); // Change image every 5 seconds
+    }
+  </script>
+
+
+</body>
+<!-- End of Body-->
+</html>
