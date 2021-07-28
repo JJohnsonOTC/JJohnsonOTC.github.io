@@ -105,13 +105,13 @@ body {
 .contact-col {
   padding: 15px;
 }
-.btn-info {
+.submit {
   background-color: var(--primary);
   color: white;
   border-color: var(--primary);
   width: 150px;
 }
-.btn-info:hover {
+.submit:hover {
   background-color: var(--secondary);
   border-color: var(--secondary)
 }
