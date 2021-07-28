@@ -1,39 +1,212 @@
 @charset "UTF-8";
+:root {
+  --primary: #50C878;
+  --secondary: #B87333;
+  --tertiary: rgb(255,255,255);
+}
 html {
   box-sizing: border-box;
+
 }
-body {}
+body {
+  background-color: rgb(0,0,0);
+  font-family: 'Courier New CE', sans-serif;
+}
 .container-nav {
   width: 100%;
   background-color: rgb(0,0,0);
   color: white;
 }
-.col-nav a {
-  display: block;
-  color: white;
+
+
+.container-fluid a {
   text-decoration: none;
+  color: white;
+}
+
+#myVideo {
+  display: none;
+}
+.video-overlay h1 {
+  font-size: 4.0rem;
+}
+.video-div {
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
-ul li {
+.video-overlay {
+  color: var(--tertiary);
+  background-color: rgb(0,0,0);
+}
+.navbar a {
+  min-width: 150px;
+}
+.dropdown {
   text-decoration: none;
-  list-style-type: none;
+  color: var(--primary);
+  background-color: rgb(0,0,0);
+}
+.dropdown a {
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 5px;
+}
+.dropdown a {
+  text-decoration: none;
+  color: var(--tertiary);
+  background-color: rgb(0,0,0);
+  text-align: center;
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--tertiary);
+}
+.video-overlay-sub a {
+  font-size: 1.2rem;
+  color: white;
+  opacity: 1.0;
+  border: 3px solid var(--secondary);
+  font-variant: small-caps;
+}
+.video-overlay-sub:hover a{
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  filter: drop-shadow(3px);
+}
+.video-overlay hr {
+  width: 60%;
+  margin: auto;
+  border-top: 5px solid rgba(255,255,255,1.0) !important;
+  border-color: white;
+  opacity: 1.0;
+}
+.form-bg {
+  color: var(--tertiary);
+  background-color: rgba(50,50,50, 0.4);
+  z-index: 5000;
+}
+.col-left {
+  display: block;
+}
+.col-left img {
+  max-height: 300px;
+  filter: saturate(1.3);
+}
+.col-right {
+  align-content: center;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+.contact-col {
+  padding: 15px;
+}
+.btn {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  width: 150px;
+}
+.btn:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary)
+}
+.footer {
+  color: var(--tertiary);
+  text-align: center;
+  padding-top: 10px;
+  display: block;
+}
+@media screen and (min-width: 780px){
+.navbar .container-fluid {
+  justify-content: space-between;
+}
+.col-left, .col-right {
+  max-width: 80%;
+}
+.col-right {
+  align-content: center;
+  text-align: left;
+}
+.navbar {
+  padding-left: 25px;
+}
+.vid-content {
+  margin-top: 20px;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      max-height: 50%;
+      overflow: hidden;
+}
+.video-overlay {
+  position: absolute;
+  padding-top: 40px;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(50,50,50, 0.3);
+  z-index: 5000;
+
+}
+.video-overlay-sub {
+  padding-top: 40px;
+  overflow: hidden;
+}
+.contact {
+  width: 80%;
+  margin: auto;
+}
+.form-bg {
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right:10%;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px 30px 20px;
+}
+.g-3 {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-
-
-
-
-
-
-@media screen and (min-width: 768px){
-  .nav-row {
+#myVideo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: contrast(2);
+  z-index: 1;
+}
+  .v2 > .row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+      align-items: center;
   }
-  .col-nav {
-    justify-content: center;
-    align-content: center;
+  .contact-container {
+    background-image: url(../images/laptop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 800px;
+    margin: 0;
+    padding: 0px;
   }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-left, .footer-right {
+    text-align: right;
+    padding-bottom: 10px;
+  }
+  .footer-right {
+    padding-right: 10px;
+  }
+
 }
