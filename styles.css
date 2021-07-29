@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* =================================
+  Global Styling - Mobile first approach
+   ================================= */
 :root {
   --primary: #50C878;
   --secondary: #B87333;
@@ -6,19 +9,49 @@
 }
 html {
   box-sizing: border-box;
-
+  font-size: 1.1rem;
 }
 body {
   background-color: rgb(0,0,0);
   font-family: 'Courier New CE', sans-serif;
 }
+h1 {
+  text-align: center;
+}
+
+ /* =================================
+        Navigation Styling
+    ================================= */
 .container-nav {
   width: 100%;
   background-color: rgb(0,0,0);
   color: white;
 }
-
-
+.navbar a {
+  min-width: 150px;
+}
+.dropdown {
+  text-decoration: none;
+  color: var(--primary);
+  background-color: rgb(0,0,0);
+}
+.navbar a:hover {
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border-radius: 5px;
+}
+.dropdown a {
+  text-decoration: none;
+  color: var(--tertiary);
+  background-color: rgb(0,0,0);
+  text-align: center;
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--tertiary);
+}
+/* =================================
+      Body Container Styling
+   ================================= */
 .container-fluid a {
   text-decoration: none;
   color: white;
@@ -40,31 +73,7 @@ body {
   color: var(--tertiary);
   background-color: rgb(0,0,0);
 }
-.navbar a {
-  min-width: 150px;
-}
-.dropdown {
-  text-decoration: none;
-  color: var(--primary);
-  background-color: rgb(0,0,0);
-}
-.dropdown a {
-  text-decoration: none;
-}
-.navbar a:hover {
-  background-color: var(--primary);
-  color: var(--tertiary);
-  border-radius: 5px;
-}
-.dropdown a {
-  text-decoration: none;
-  color: var(--tertiary);
-  background-color: rgb(0,0,0);
-  text-align: center;
-}
-.nav-link:focus, .nav-link:hover {
-  color: var(--tertiary);
-}
+
 .video-overlay-sub a {
   font-size: 1.2rem;
   color: white;
@@ -72,12 +81,12 @@ body {
   border: 3px solid var(--secondary);
   font-variant: small-caps;
 }
-.video-overlay-sub:hover a{
+.video-overlay-sub:hover a, .about-thanks a:hover {
   background-color: var(--secondary);
   color: var(--tertiary);
   filter: drop-shadow(3px);
 }
-.video-overlay hr {
+.video-overlay hr, .skills hr {
   width: 60%;
   margin: auto;
   border-top: 5px solid rgba(255,255,255,1.0) !important;
@@ -105,6 +114,23 @@ body {
 .contact-col {
   padding: 15px;
 }
+.row-about > .col-right, .row-about > .col-left, .container-about {
+  padding: 20px 20px 20px 20px;
+
+}
+.skills {
+  background-color: var(--primary);
+  color:var(--tertiary);
+}
+.col-right-intro, .aspirations, .about-thanks {
+  color: var(--tertiary);
+}
+.about-thanks, .aspirations {
+  text-align: center;
+}
+.contact-container {
+  color: white;
+}
 .submit {
   background-color: var(--primary);
   color: white;
@@ -121,6 +147,11 @@ body {
   padding-top: 10px;
   display: block;
 }
+
+/* =================================
+      Desktop Styling
+   ================================= */
+
 @media screen and (min-width: 780px){
 .navbar .container-fluid {
   justify-content: space-between;
@@ -131,9 +162,15 @@ body {
 .col-right {
   align-content: center;
   text-align: left;
+  margin: auto;
 }
 .navbar {
   padding-left: 25px;
+}
+
+.skills {
+  background-image: linear-gradient(to right, rgb(0,0,0),#50C878, #50C878,rgb(0,0,0));
+
 }
 .vid-content {
   margin-top: 20px;
@@ -182,13 +219,45 @@ body {
   filter: contrast(2);
   z-index: 1;
 }
-  .v2 > .row {
+  .v2 > .row, .row-about {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-      align-items: center;
+    align-items: center;
   }
+  .row-about > .col-left img {
+    filter: drop-shadow(0 0 0.5rem var(--tertiary));
+  }
+  .row-about > .col-right, .row-about > .col-left, .container-about {
+    color: white;
+    width: 80%;
+    margin: auto;
+
+  }
+
+  .row-about > .col-right, .row-about > .col-right h2 {
+    text-align: left;
+  }
+  .row-about > .col-left {
+    text-align: right;
+
+  }
+.aspire {
+  background-image: url(images/aspire.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.aspirations, .about-thanks {
+  background-color: rgba(50,50,50,0.3);
+  color: white;
+}
+  .v3 h1, .v3 h2 {
+    text-align: center;
+    color: white;
+  }
+
   .contact-container {
-    background-image: url(../images/laptop.jpg);
+    background-image: url(images/laptop.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
